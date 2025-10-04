@@ -3,16 +3,16 @@ from minsearch import Index
 from minsearch import VectorSearch
 from data_ingestion import read_repo_data
 from sentence_transformers import SentenceTransformer
+from chunk import rag_chunking
 import numpy as np
 
 rag_cookbook = read_repo_data('athina-ai' , 'rag-cookbooks')
 
 index = Index(
-    text_fields= ['filename' ,'section'],
+    text_field = ["chunk", "title", "description", "filename"] , 
     keyword_fields=[]
 
 )
-from chunk import rag_chunking
 
 chunks = rag_chunking(rag_cookbook)
 
@@ -24,7 +24,7 @@ embedding_model = SentenceTransformer("multi-qa-distilbert-cos-v1")
 faq_embeddings = []
 
 for chunk in chunks:
-    text = chunk['section']
+    text = chunk['chunk']
     v = embedding_model.encode(text)
     faq_embeddings.append(v)
 
