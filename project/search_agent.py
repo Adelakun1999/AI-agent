@@ -2,6 +2,7 @@ from pydantic_ai import Agent
 import os 
 from dotenv import load_dotenv
 import search_tools
+from openai import AsyncOpenAI
 load_dotenv()
 
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
@@ -30,11 +31,13 @@ def init_agent(index , repo_owner , repo_name):
     )
     search_tool = search_tools.SearchTool(index=index)
 
+
+
     agent = Agent(
         name = "gh_agent",
         instructions= system_prompt,
         tools = [search_tool.search],
-        model= "gpt-4o-mini"
+        model= "gpt-4o-mini" 
     )
 
     return agent
