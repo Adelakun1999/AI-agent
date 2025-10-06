@@ -1,0 +1,7 @@
+requests
+python-frontmatter
+openai
+python-dotenv
+minsearch 
+pydantic-ai
+streamlit
