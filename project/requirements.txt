@@ -1,7 +1,7 @@
 requests
 python-frontmatter
-openai
-python-dotenv
+openai>=2.0.0
+python-dotenv>=1.1.1
 minsearch 
-pydantic-ai
-streamlit
+pydantic-ai>=1.0.15
+streamlit>=1.50.0
