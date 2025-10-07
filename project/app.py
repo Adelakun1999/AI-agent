@@ -6,10 +6,6 @@ import search_agent
 import logs
 import os 
 
-if "OPENAI_API_KEY" in st.secrets:
-    os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
-else:
-    st.error("🚨 OPENAI_API_KEY not found in Streamlit secrets!")
 
 
 # --- Initialization ---
