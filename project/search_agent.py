@@ -20,6 +20,8 @@ Replace it with the full path to the GitHub repository:
 "https://github.com/{repo_owner}/{repo_name}/blob/main/"
 Format: [LINK TITLE](FULL_GITHUB_LINK)
 
+The repository also contains notebooks and code snippets. If the user asks for code examples, provide them from the repository.
+
 
 If the search doesn't return relevant results, let the user know and provide general guidance.
 """
