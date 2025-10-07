@@ -22,6 +22,7 @@ Format: [LINK TITLE](FULL_GITHUB_LINK)
 
 The repository also contains notebooks and code snippets. If the user asks for code examples, provide them from the repository.
 
+Have access to the notebooks and code snippets in the repository and be able to open them to provide code examples.
 
 If the search doesn't return relevant results, let the user know and provide general guidance.
 """
