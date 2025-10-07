@@ -15,7 +15,6 @@ def init_agent():
     repo_name = "rag-cookbooks"
 
 
-    st.write("🔄 Indexing repo...")
     index = data_ingestion.index_data(repo_owner, repo_name)
     agent = search_agent.init_agent(index, repo_owner, repo_name)
     return agent
@@ -24,8 +23,8 @@ def init_agent():
 agent = init_agent()
 
 # --- Streamlit UI ---
-st.set_page_config(page_title="AI FAQ Assistant", page_icon="🤖", layout="centered")
-st.title("🤖 AI FAQ Assistant")
+st.set_page_config(page_title="AI RAG Assistant", page_icon="🤖", layout="centered")
+st.title("🤖 AI RAG Assistant")
 st.caption("Ask me anything about the rag-cookbooks repository")
 
 # Initialize chat history
